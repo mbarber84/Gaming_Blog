@@ -21,7 +21,7 @@ function App() {
                
           <Route path="/login" element={user ? <Login /> :<Home/>}/>{/*if user is login in start at home page*/}
              
-          <Route path="/write" element={user ? <Register /> :<Write/> }/>{/*if user wants to write they must be registered*/}
+          <Route path="/write" element={user ? <Write/> :<Register />}/>{/*if user wants to write they must be registered*/}
               
           <Route path="/setting" element={user ? <Register /> :<Setting/>}/> {/*to change settling user must be registered*/}
             
