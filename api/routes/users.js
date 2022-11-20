@@ -6,7 +6,7 @@ const bcrypt = require("bcrypt");
 //Update User
 router.put("/:id", async (req, res) => {
   //Arrow function
-  //put method to update
+  //.put method to update
   if (req.body.userId === req.params.id) {
     if (req.body.password) {
       const salt = await bcrypt.genSalt(10); //await = async
