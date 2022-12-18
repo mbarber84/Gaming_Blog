@@ -1,20 +1,28 @@
 import "./post.css"
+import {Link} from "react-router-dom"
 
-export default function post() {
+export default function post({post}) {
   return (
     <div className="post">
-        <img className="postImg" src="https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="messy gaming desk" />
+      {post.photo && (
+        <img className="postImg" src={post.photo} alt="messy gaming desk" />
+        )}
         <div className="postInfo">
-            <div className="postCats">
-                <span className="postCat">MMORPG</span>
-                <span className="postCat">War Games</span>
+            <div className="postCats">{
+              post.categories.map(c=>(
+                <span className="postCat">{c.name}</span>
+              ))
+            }  
             </div>
-            <span className="postTitle">Lorem ipsum dolor consectetur.</span>
+            <Link to={`/post/${post._id}`} className = "link"> 
+            <span className="postTitle">{post.title}</span>
+            </Link>
+            
             <hr />
-            <span className="postDate">1 hour ago</span>
+            <span className="postDate">{new Date(post.createdAt).toDateString()}</span> {/*to style date correctly*/}
         </div>
         <p className="postDesc">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quisquam, error nam, fuga qui necessitatibus repellendus eaque soluta at quaerat unde eius odio quidem veniam possimus tenetur velit facilis rerum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quisquam, error nam, fuga qui necessitatibus repellendus eaque soluta at quaerat unde eius odio quidem veniam possimus tenetur velit facilis rerum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quisquam, error nam, fuga qui necessitatibus repellendus eaque soluta at quaerat unde eius odio quidem veniam possimus tenetur velit facilis rerum!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia quisquam, error nam, fuga qui necessitatibus repellendus eaque soluta at quaerat unde eius odio quidem veniam possimus tenetur velit facilis rerum!
+           {post.desc}
         </p>
     </div>
   )
