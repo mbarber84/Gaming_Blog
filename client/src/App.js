@@ -8,22 +8,24 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register"
 import {BrowserRouter as Router, Switch, Route, Routes, Link} from "react-router-dom";
 import Posts from "./components/posts/Posts";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  const user = true;
+  const {user} = useContext(Context);
   return (
     <Router>
       <Topbar/>
       <Routes>
           <Route exact path="/" element={<Home />}/>
 
-          <Route path="/register" element={user ? <Register /> :<Home/>}/>{/*if user is registered direct to home page otherwise register*/}
+          <Route path="/register" element={user ? <Home/> : <Register />}/>{/*if user is registered direct to home page otherwise register*/}
                
-          <Route path="/login" element={user ? <Login /> :<Home/>}/>{/*if user is login in start at home page*/}
+          <Route path="/login" element={user ? <Home/> : <Login />}/>{/*if user is login in start at home page*/}
              
-          <Route path="/write" element={user ? <Write/> :<Register />}/>{/*if user wants to write they must be registered*/}
+          <Route path="/write" element={user ? <Write/> : <Register />}/>{/*if user wants to write they must be registered*/}
               
-          <Route path="/setting" element={user ? <Register /> :<Setting/>}/> {/*to change settling user must be registered*/}
+          <Route path="/setting" element={user ? <Setting/> : <Register />}/> {/*to change settling user must be registered*/}
             
           <Route path="/post/:postId" element={<Single />}/>
               
