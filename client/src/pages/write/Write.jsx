@@ -1,6 +1,9 @@
+import { useState } from "react"
 import "./write.css"
 
 export default function Write() {
+  const [title,setTitle] = useState("")
+  const [title,setTitle] = useState("")
   return (
     <div className='write'>
         <form className="writeForm">
