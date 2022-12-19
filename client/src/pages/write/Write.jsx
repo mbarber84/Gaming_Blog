@@ -3,7 +3,7 @@ import "./write.css"
 
 export default function Write() {
   const [title,setTitle] = useState("")
-  const [title,setTitle] = useState("")
+  const [desc,setdesc] = useState("")
   return (
     <div className='write'>
         <form className="writeForm">
