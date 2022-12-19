@@ -3,7 +3,7 @@ import { useLocation } from "react-router";
 import axios from "axios";
 import "./singlePost.css";
 import { useState } from "react";
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
 
 export default function SinglePost() {
   const location = useLocation();

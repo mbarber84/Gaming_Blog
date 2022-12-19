@@ -10,7 +10,7 @@ import {BrowserRouter as Router, Switch, Route, Routes, Link} from "react-router
 import Posts from "./components/posts/Posts";
 
 function App() {
-  const user = true;
+  const user = false;
   return (
     <Router>
       <Topbar/>
