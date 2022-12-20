@@ -14,8 +14,9 @@ export default function SinglePost() {
     const getPost = async () => {
       const res = await axios.get("/posts/" + path);
       setPost(res.data);
-    }
-    getPost()
+      
+    };
+    getPost();
   },[path]);
 
   return (
