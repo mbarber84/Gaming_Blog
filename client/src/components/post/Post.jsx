@@ -2,7 +2,7 @@ import "./post.css"
 import {Link} from "react-router-dom"
 
 export default function post({post}) {
-  const PF = "localhost:5000/api/images/"
+  const PF = "http://localhost:5000/images/";
   return (
     <div className="post">
       {post.photo && (
