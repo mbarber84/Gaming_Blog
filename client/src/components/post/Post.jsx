@@ -1,7 +1,7 @@
 import "./post.css"
 import {Link} from "react-router-dom"
 
-export default function post({post}) {
+export default function Post({post}) {
   const PF = "http://localhost:5000/images/";
   return (
     <div className="post">
@@ -10,7 +10,7 @@ export default function post({post}) {
         )}
         <div className="postInfo">
             <div className="postCats">{
-              post.categories.map(c=>(
+              post.categories.map((c)=>(
                 <span className="postCat">{c.name}</span>
               ))
             }  

@@ -39,7 +39,7 @@ export default function SinglePost() {
     try{
       await axios.put(`/posts/${post._id}`, {
         username:user.username, title,desc,}); //post id
-      window.location.reload("/");
+      setUpdateMode(false); //or window.location.reload("/");
     }catch(err){}
   };
 
@@ -56,7 +56,7 @@ export default function SinglePost() {
         {
           updateMode ? <input type="text" value={title} className="singlePostTitleInput" autoFocus onChange={(e)=>setTitle(e.target.value)}/> : (
         <h1 className="singlePostTitle">
-          {post.title}
+          {title}
           {post.username === user?.username && (
           <div className="singlePostEdit">
             <i className="singlePostIcon fa-solid fa-pen-to-square" onClick={()=>setUpdateMode(true)}></i> {/** Edit button*/}
@@ -77,7 +77,7 @@ export default function SinglePost() {
         </div>
         {updateMode ? <textarea className="singlePostDescInput" value={desc} onChange={(e)=>setDesc(e.target.value)}/> : (
         <p className="singlePostDesc">
-          {post.desc}
+          {desc}
         </p>
         )}
         {updateMode && (

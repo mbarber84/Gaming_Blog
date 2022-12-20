@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const User = require("../models/Users");
-const Post = require("../models/Posts");
+const Post = require("../models/Post");
 
 //Create new post
 router.post("/", async (req, res) => {
@@ -35,9 +35,7 @@ router.put("/:id", async (req, res) => {
         res.status(500).json(err);
       }
     } else {
-      res
-        .status(401)
-        .json(
+      res.status(401).json(
           "Something has gone wrong. You can only update posts on your account"
         );
     }
