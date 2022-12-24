@@ -6,6 +6,7 @@ import { useState } from "react";
 import {Link} from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+//This code is a React component that displays a single post. It uses the useLocation hook to get the pathname of the post, which is used to make an API call to get the post data. The post data is then stored in state and used to populate the page with information about the post, such as its title, description, author, and date created. The user can also delete or update the post if they are logged in as the author of the post. The code also includes logic for displaying an input field for updating or deleting a post when clicked on.
 
 export default function SinglePost() {
   const location = useLocation();
@@ -25,7 +26,7 @@ export default function SinglePost() {
       setDesc(res.data.desc);
     };
     getPost();
-  },[path]);
+  },[path]); // This code is using the React Hooks useEffect to make an asynchronous call to an API endpoint. The endpoint is "/posts/" + path, where path is a variable that contains the post id. The response from the API call is stored in the res variable and then used to set the post, title, and description variables. The useEffect hook will run every time the path variable changes.
 
   const handleDelete = async ()=>{
     try{
@@ -33,7 +34,7 @@ export default function SinglePost() {
         data: {username:user.username}}); //post id
       window.location.replace("/");
     }catch(err){}
-  };
+  }; // This code is a function that handles the deletion of a post. It uses the axios library to make an asynchronous delete request to the server, passing in the post ID and the username of the user making the request. If successful, it will redirect the user to the homepage. If there is an error, it will do nothing.
 
   const handleUpdate = async()=>{
     try{
@@ -41,7 +42,7 @@ export default function SinglePost() {
         username:user.username, title,desc,}); //post id
       setUpdateMode(false); //or window.location.reload("/");
     }catch(err){}
-  };
+  }; //This code is an asynchronous function that handles an update to a post. It uses the axios library to make a PUT request to the server, passing in the post ID, username, title, and description. If the request is successful, it sets the update mode to false or reloads the page. If there is an error, it will catch it and do nothing.
 
   return (
     <div className="singlePost">
@@ -87,3 +88,6 @@ export default function SinglePost() {
     </div>
   );
 }
+// This code is a React component that renders a single post. It displays the post's title, author, date created, and description. It also includes two icons for editing and deleting the post if the user is the author of the post. If the user is not the author, only the title, author, date created, and description are displayed. The code also includes an input field and text area for updating the title and description of the post if updateMode is set to true. Finally, it includes a button to submit any changes made to the post when updateMode is set to true.
+
+
