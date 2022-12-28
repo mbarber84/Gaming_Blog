@@ -11,6 +11,8 @@ import Posts from "./components/posts/Posts";
 import { useContext } from "react";
 import { Context } from "./context/Context";
 
+// This code is a React component that renders a Router with Routes and components. The Router is used to navigate between different pages, and the Routes are used to define which components should be rendered for each page. The code also uses the useContext hook to get the user from the Context, and then uses an if statement to determine which component should be rendered depending on whether or not the user is logged in. If the user is logged in, they will be directed to the Home page, otherwise they will be directed to either Register, Login, Write or Setting page. Finally, it renders a Single component for any postId that is passed in as a parameter.
+
 function App() {
   const {user} = useContext(Context);
   return (
