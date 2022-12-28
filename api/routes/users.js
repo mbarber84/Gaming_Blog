@@ -3,6 +3,8 @@ const User = require("../models/Users");
 const Posts = require("../models/Post");
 const bcrypt = require("bcrypt");
 
+// This code is a set of routes for a user in an Express.js application. The first route is a PUT request which updates the user's information, such as their password. It uses bcrypt to hash the password before saving it to the database. The second route is a DELETE request which deletes the user from the database, as well as any posts associated with them. The third route is a GET request which retrieves the user's information from the database, excluding their password. Finally, it exports the router so that it can be used in other parts of the application.
+
 //Update User
 router.put("/:id", async (req, res) => {
   //Arrow function
