@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from "axios"; //Axios is a JavaScript library used for making HTTP requests from the browser. It is a promise-based library that works both in the browser and in Node.js. Axios provides a single API for dealing with both XHR in the browser and Node's HTTP interface. It supports all modern browsers, including support for IE8 and higher. Axios allows you to make both GET and POST requests, as well as providing built-in support for headers, timeouts, interceptors, and automatic transforms for JSON data.
 import { useEffect } from "react";
 import { useState } from "react";
 import {Link} from "react-router-dom";

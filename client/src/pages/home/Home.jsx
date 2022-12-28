@@ -5,6 +5,7 @@ import Posts from "../../components/posts/Posts";
 import Sidebar from "../../components/sidebar/Sidebar";
 import "./home.css";
 import axios from "axios";
+//Axios is a JavaScript library used for making HTTP requests from the browser. It is a promise-based library that works both in the browser and in Node.js. Axios provides a single API for dealing with both XHR in the browser and Node's HTTP interface. It supports all modern browsers, including support for IE8 and higher. Axios allows you to make both GET and POST requests, as well as providing built-in support for headers, timeouts, interceptors, and automatic transforms for JSON data.
 import { useLocation } from "react-router-dom";
 //This code is a React functional component that is responsible for displaying the home page of an application. It uses the useState and useEffect hooks to fetch posts from an API endpoint and store them in the posts state variable. The search parameter from the URL is used to filter the results. The component then renders a Header, Posts, and Sidebar components.
 
