@@ -2,6 +2,8 @@ const router = require("express").Router();
 const User = require("../models/Users");
 const Post = require("../models/Post");
 
+//This code is a set of routes for a Post model. The first route is a POST request which creates a new post using the data from the request body. The second route is a PUT request which updates an existing post with the data from the request body, but only if the username matches. The third route is a DELETE request which deletes an existing post, but only if the username matches. The fourth route is a GET request which retrieves an existing post by its ID. The fifth route is a GET request which retrieves all posts, or all posts by a specific user or category if specified in the query parameters. Finally, the router is exported so it can be used in other files.
+
 //Create new post
 router.post("/", async (req, res) => {
   //Arrow function
