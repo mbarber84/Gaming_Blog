@@ -35,7 +35,7 @@ export default function Register() {
             <label>Username</label>
             <input type="text" className="registerInput" placeholder="Enter username..."
             onChange={e=>setUsername(e.target.value)}/>
-            {{/** This code is written in React.js and is part of a component that renders a form for registering a user. The code creates an HTML div element with the class name "register" and contains a span element with the text "Register" and a form element with the class name "registerForm". The form has an onSubmit event handler that calls the handleSubmit function when the form is submitted. The code also creates an input element of type "text" with the class name "registerInput" and a placeholder text of "Enter username...". The input also has an onChange event handler that calls the setUsername function when the value of the input changes, passing in the value of the input as an argument. */}}
+            {/** This code is written in React.js and is part of a component that renders a form for registering a user. The code creates an HTML div element with the class name "register" and contains a span element with the text "Register" and a form element with the class name "registerForm". The form has an onSubmit event handler that calls the handleSubmit function when the form is submitted. The code also creates an input element of type "text" with the class name "registerInput" and a placeholder text of "Enter username...". The input also has an onChange event handler that calls the setUsername function when the value of the input changes, passing in the value of the input as an argument. */}
 
             <label>Email</label>
             <input type="email" className="registerInput" placeholder="Enter email address..."

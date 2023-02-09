@@ -56,7 +56,7 @@ export default function Setting() {
                 <label htmlFor="fileInput">
                 <i className="settingPPIcon fa-regular fa-circle-user"></i>
                 </label>
-                <input type="file" id="fileInput" style={{display:"none"}} onChange={e=>setFile(e.target.files[0])}/> {{/**This code is an HTML input element that allows a user to select a file from their computer. The input element has an id of "fileInput" and is set to display:none so it is not visible on the page. The onChange event handler is set to call a function called setFile, which takes the first file in the list of files selected by the user (e.target.files[0]). */}}
+                <input type="file" id="fileInput" style={{display:"none"}} onChange={e=>setFile(e.target.files[0])}/> {/**This code is an HTML input element that allows a user to select a file from their computer. The input element has an id of "fileInput" and is set to display:none so it is not visible on the page. The onChange event handler is set to call a function called setFile, which takes the first file in the list of files selected by the user (e.target.files[0]). */}
             </div>
             <label>Username</label>
             <input type="text" placeholder={user.username} onChange={e=>setUsername(e.target.value)}/>

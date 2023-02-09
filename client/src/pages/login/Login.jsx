@@ -36,7 +36,7 @@ export default function Login() {
           className="loginInput"
           placeholder="Enter Username..."
           ref={userRef}
-        /> {{/* This code is creating a login form with a username input field. The div with the className "login" is the container for the form. The span with the className "loginTitle" is displaying the text "Login". The form has an onSubmit event handler that calls a function called handleSubmit when it is submitted. Inside of the form there is an input field of type text with a className of "loginInput" and a placeholder of "Enter Username...". This input field also has a reference to a variable called userRef.*/}}
+        /> {/* This code is creating a login form with a username input field. The div with the className "login" is the container for the form. The span with the className "loginTitle" is displaying the text "Login". The form has an onSubmit event handler that calls a function called handleSubmit when it is submitted. Inside of the form there is an input field of type text with a className of "loginInput" and a placeholder of "Enter Username...". This input field also has a reference to a variable called userRef.*/}
         <label>Password</label>
         <input
           type="password"
